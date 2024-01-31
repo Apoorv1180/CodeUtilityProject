@@ -13,6 +13,15 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/buildSrc" />
+            <option value="$PROJECT_DIR$/core" />
+            <option value="$PROJECT_DIR$/core/common" />
+            <option value="$PROJECT_DIR$/core/feature_api" />
+            <option value="$PROJECT_DIR$/core/network" />
+            <option value="$PROJECT_DIR$/feature" />
+            <option value="$PROJECT_DIR$/feature/news" />
+            <option value="$PROJECT_DIR$/feature/news/data" />
+            <option value="$PROJECT_DIR$/feature/news/domain" />
+            <option value="$PROJECT_DIR$/feature/news/ui" />
           </set>
         </option>
       </GradleProjectSettings>
