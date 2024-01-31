@@ -54,6 +54,7 @@ dependencies {
     implementation JetpackCompose.composeUi
     implementation JetpackCompose.composeUiToolingPreview
     implementation JetpackCompose.composeMaterial
+    implementation JetpackCompose.composeMaterial3
 
     testImplementation TestImplementation.junit
     androidTestImplementation AndroidTestImplementation.junit
