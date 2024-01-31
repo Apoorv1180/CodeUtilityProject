@@ -15,3 +15,9 @@ dependencyResolutionManagement {
 
 rootProject.name = "CodeUtilityProject"
 include ':app'
+include ':feature:news:data'
+include ':feature:news:domain'
+include ':feature:news:ui'
+include ':core:network'
+include ':core:common'
+include ':core:feature_api'
