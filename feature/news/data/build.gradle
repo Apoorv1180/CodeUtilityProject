@@ -29,6 +29,12 @@ android {
     kotlinOptions {
         jvmTarget = '17'
     }
+    buildFeatures {
+        compose true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion '1.5.1'
+    }
 }
 
 dependencies {
@@ -38,10 +44,12 @@ dependencies {
     implementation DependencyConstants.androidMaterial
     implementation DaggerHilt.hilt
     kapt DaggerHilt.hiltCompiler
+    implementation AndroidX.androidXRuntime
+    implementation AndroidX.androidXRuntimeLiveData
+    implementation AndroidX.androidXRuntimeRxJava
     testImplementation TestImplementation.junit
     androidTestImplementation AndroidTestImplementation.junit
     androidTestImplementation AndroidTestImplementation.espresso
-
     implementation project(":feature:news:domain")
     implementation project(":core:network")
 }

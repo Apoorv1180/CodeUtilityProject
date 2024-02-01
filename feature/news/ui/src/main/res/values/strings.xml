@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="na">NA</string>
+    <string name="Author">Author</string>
+    <string name="error">Error</string>
+    <string name="appName">News App</string>
+    <string name="refresh">Refresh</string>
+</resources>
