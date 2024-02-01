@@ -1,6 +1,7 @@
 package com.core.network.di
 
 import com.core.network.ApiService
+import com.core.network.dataproviders.NewsDataProviders
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -20,5 +21,9 @@ object NetworkModule {
             .build()
             .create(ApiService::class.java)
     }
+
+    @Provides
+    fun provideNewsDataProvider(apiService: ApiService): NewsDataProviders =
+        NewsDataProviders(apiService)
 
 }
