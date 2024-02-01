@@ -11,6 +11,6 @@ import dagger.hilt.components.SingletonComponent
 @Module
 object DomainLayerModule {
     @Provides
-    fun getNewsListUseCase(newsRepository: NewsRepository): GetNewsListUseCase =
+    fun provideGetNewsListUseCase(newsRepository: NewsRepository): GetNewsListUseCase =
         GetNewsListUseCase(newsRepository)
 }

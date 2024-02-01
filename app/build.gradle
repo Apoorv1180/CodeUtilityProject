@@ -39,7 +39,7 @@ android {
         compose true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion '1.4.3'
+        kotlinCompilerExtensionVersion '1.5.1'
     }
     packaging {
         resources {
@@ -58,6 +58,10 @@ dependencies {
     implementation JetpackCompose.composeMaterial
     implementation JetpackCompose.composeMaterial3
 
+    implementation AndroidX.androidXRuntime
+    implementation AndroidX.androidXRuntimeLiveData
+    implementation AndroidX.androidXRuntimeRxJava
+
     implementation JetpackCompose.navigation
 
     implementation DaggerHilt.hilt
@@ -72,6 +76,8 @@ dependencies {
     debugImplementation ComposeDebugImplementation.manifestTest
 
     implementation project(":feature:news:ui")
+    implementation project(":feature:news:domain")
+    implementation project(":feature:news:data")
     implementation project(":core:common")
     implementation project(":core:feature_api")
 }

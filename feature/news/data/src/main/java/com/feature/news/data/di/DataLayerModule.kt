@@ -12,6 +12,6 @@ import dagger.hilt.components.SingletonComponent
 @Module
 object DataLayerModule {
     @Provides
-    fun providesNewsRepo(newsDataProviders: NewsDataProviders): NewsRepository =
+    fun provideNewsRepo(newsDataProviders: NewsDataProviders): NewsRepository =
         NewsRepoImpl(newsDataProviders)
 }

@@ -27,6 +27,12 @@ android {
     kotlinOptions {
         jvmTarget = '17'
     }
+    buildFeatures {
+        compose true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion '1.5.1'
+    }
 }
 
 dependencies {
@@ -35,7 +41,11 @@ dependencies {
     implementation DependencyConstants.appCompat
     implementation DependencyConstants.androidMaterial
     implementation JetpackCompose.navigation
+    implementation AndroidX.androidXRuntime
+    implementation AndroidX.androidXRuntimeLiveData
+    implementation AndroidX.androidXRuntimeRxJava
     testImplementation TestImplementation.junit
     androidTestImplementation AndroidTestImplementation.junit
     androidTestImplementation AndroidTestImplementation.espresso
+
 }
