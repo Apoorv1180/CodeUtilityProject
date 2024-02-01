@@ -29,23 +29,41 @@ android {
     kotlinOptions {
         jvmTarget = '17'
     }
+    buildFeatures {
+        compose true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion '1.5.1'
+    }
 }
 
 dependencies {
 
     implementation DependencyConstants.core
-    implementation DependencyConstants.appCompat
-    implementation DependencyConstants.androidMaterial
-
+    implementation CoroutinesLifecycleScope.lifeCycleRuntime
+    implementation JetpackCompose.composeActivity
+    implementation JetpackCompose.composeUi
+    implementation JetpackCompose.composeUiToolingPreview
+    implementation JetpackCompose.composeMaterial
+    implementation JetpackCompose.composeMaterial3
+    implementation AndroidX.androidXRuntime
+    implementation AndroidX.androidXRuntimeLiveData
+    implementation AndroidX.androidXRuntimeRxJava
     implementation JetpackCompose.navigation
 
     implementation DaggerHilt.hilt
     kapt DaggerHilt.hiltCompiler
+    implementation DaggerHilt.hiltComposeNavigation
 
     testImplementation TestImplementation.junit
     androidTestImplementation AndroidTestImplementation.junit
     androidTestImplementation AndroidTestImplementation.espresso
 
+    androidTestImplementation ComposeAndroidTestImplementation.composeUiTest
+    debugImplementation ComposeDebugImplementation.toolingUi
+    debugImplementation ComposeDebugImplementation.manifestTest
+
     implementation project(":core:feature_api")
     implementation project(":core:common")
+    implementation project(":feature:news:domain")
 }

@@ -15,7 +15,7 @@ object Version {
     const val coroutineLifecycleScope = "2.5.1"
     const val glide = "4.12.0"
     const val viewModelDeligate = "1.6.0"
-    const val dagger = "2.44"
+    const val dagger = "2.50"
     const val hiltCompiler = "1.0.0"
     const val hiltComposeNavigation = "1.0.0"
     const val roomVersion = "2.4.3"
@@ -29,6 +29,7 @@ object Version {
     const val composeMaterial3 = "1.1.2"
     const val composeNavigation = "2.6.0-alpha05"
     const val coilImageLoading = "2.2.2"
+    const val composeRuntime = "1.6.0"
 
     // testImplementation versions
     const val kotlinxCoroutine = "1.6.4"
@@ -38,8 +39,8 @@ object Version {
     const val mockitoInline = "2.25.0"
 
     // dagger hilt testing
-    const val daggerHiltTestImpl = "2.44"
-    const val daggerHiltAndroidTestImpl = "2.44"
+    const val daggerHiltTestImpl = "2.50"
+    const val daggerHiltAndroidTestImpl = "2.50"
 }
 
 object DependencyConstants {
@@ -52,6 +53,14 @@ object DependencyConstants {
     // testing
     const val testRunner = "androidx.test:runner:${Version.testRunner}"
 
+}
+
+object AndroidX {
+    const val androidXRuntime = "androidx.compose.runtime:runtime:${Version.composeRuntime}"
+    const val androidXRuntimeLiveData =
+        "androidx.compose.runtime:runtime-livedata:${Version.composeRuntime}"
+    const val androidXRuntimeRxJava =
+        "androidx.compose.runtime:runtime-rxjava2:${Version.composeRuntime}"
 }
 
 object TestImplementation {

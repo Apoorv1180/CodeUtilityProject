@@ -20,6 +20,13 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    buildFeatures {
+        compose true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion '1.5.1'
+    }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_17
         targetCompatibility JavaVersion.VERSION_17
@@ -35,6 +42,9 @@ dependencies {
     implementation DependencyConstants.appCompat
     implementation DependencyConstants.androidMaterial
     testImplementation TestImplementation.junit
+    implementation AndroidX.androidXRuntime
+    implementation AndroidX.androidXRuntimeLiveData
+    implementation AndroidX.androidXRuntimeRxJava
     androidTestImplementation AndroidTestImplementation.junit
     androidTestImplementation AndroidTestImplementation.espresso
 }
