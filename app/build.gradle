@@ -52,26 +52,26 @@ dependencies {
 
     implementation DependencyConstants.core
     implementation CoroutinesLifecycleScope.lifeCycleRuntime
+
     implementation JetpackCompose.composeActivity
     implementation JetpackCompose.composeUi
     implementation JetpackCompose.composeUiToolingPreview
-    implementation JetpackCompose.composeMaterial
-    implementation JetpackCompose.composeMaterial3
+    implementation JetpackCompose.androidMaterial3
+    implementation JetpackCompose.navigation
 
     implementation AndroidX.androidXRuntime
     implementation AndroidX.androidXRuntimeLiveData
     implementation AndroidX.androidXRuntimeRxJava
 
-    implementation JetpackCompose.navigation
-
     implementation DaggerHilt.hilt
     kapt DaggerHilt.hiltCompiler
 
     testImplementation TestImplementation.junit
+
     androidTestImplementation AndroidTestImplementation.junit
     androidTestImplementation AndroidTestImplementation.espresso
-
     androidTestImplementation ComposeAndroidTestImplementation.composeUiTest
+
     debugImplementation ComposeDebugImplementation.toolingUi
     debugImplementation ComposeDebugImplementation.manifestTest
 

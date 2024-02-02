@@ -1,7 +1,6 @@
 object Version {
     const val core = "1.9.0"
     const val appcompat = "1.5.1"
-    const val androidMaterial = "1.6.1"
     const val constraintLayout = "2.1.4"
     const val testRunner = "1.5.2"
     const val testImplJunit = "4.13.2"
@@ -13,14 +12,8 @@ object Version {
     const val scalerConvertor = "2.1.0"
     const val kotlinCoroutines = "1.6.1"
     const val coroutineLifecycleScope = "2.5.1"
-    const val glide = "4.12.0"
-    const val viewModelDeligate = "1.6.0"
     const val dagger = "2.50"
-    const val hiltCompiler = "1.0.0"
     const val hiltComposeNavigation = "1.0.0"
-    const val roomVersion = "2.4.3"
-    const val swipeRefresh = "1.1.0"
-    const val lottieAnimations = "3.4.2"
 
     // compose
     const val composeUiVersion = "1.3.3"
@@ -46,7 +39,6 @@ object Version {
 object DependencyConstants {
     const val core = "androidx.core:core-ktx:${Version.core}"
     const val appCompat = "androidx.appcompat:appcompat:${Version.appcompat}"
-    const val androidMaterial = "com.google.android.material:material:${Version.androidMaterial}"
     const val constraintLayout =
         "androidx.constraintlayout:constraintlayout:${Version.constraintLayout}"
 
@@ -101,19 +93,6 @@ object CoroutinesLifecycleScope {
         "androidx.lifecycle:lifecycle-runtime-ktx:${Version.coroutineLifecycleScope}"
 }
 
-object Glide {
-    const val glide = "com.github.bumptech.glide:glide:${Version.glide}"
-    const val annotationProcessor = "com.github.bumptech.glide:compiler:${Version.glide}"
-}
-
-object CoilImageLoadingLib {
-    const val coil = "io.coil-kt:coil-compose:${Version.coilImageLoading}"
-}
-
-object ViewModelDelegate {
-    const val viewModelDeligate = "androidx.activity:activity-ktx:${Version.viewModelDeligate}"
-}
-
 object DaggerHilt {
     const val hilt = "com.google.dagger:hilt-android:${Version.dagger}"
     const val hiltAndroidCompiler = "com.google.dagger:hilt-android-compiler:${Version.dagger}"
@@ -136,20 +115,6 @@ object DaggerHiltTestingTestImpl {
         "com.google.dagger:hilt-android-compiler:${Version.daggerHiltAndroidTestImpl}"
 }
 
-object Room {
-    const val roomCompiler = "androidx.room:room-compiler:${Version.roomVersion}"
-    const val room = "androidx.room:room-ktx:${Version.roomVersion}"
-}
-
-object CircularProgressBar {
-    const val swipeRefresh =
-        "androidx.swiperefreshlayout:swiperefreshlayout:${Version.swipeRefresh}"
-}
-
-object LottieAnimations {
-    const val lottieAnimations = "com.airbnb.android:lottie:${Version.lottieAnimations}"
-}
-
 // compose
 
 object JetpackCompose {
@@ -157,8 +122,7 @@ object JetpackCompose {
     const val composeUi = "androidx.compose.ui:ui:${Version.composeUiVersion}"
     const val composeUiToolingPreview =
         "androidx.compose.ui:ui-tooling-preview:${Version.composeUiVersion}"
-    const val composeMaterial = "androidx.compose.material:material:${Version.composeMaterial}"
-    const val composeMaterial3 = "androidx.compose.material3:material3:${Version.composeMaterial3}"
+    const val androidMaterial3 = "androidx.compose.material3:material3:${Version.composeMaterial3}"
     const val navigation = "androidx.navigation:navigation-compose:${Version.composeNavigation}"
 }
 
@@ -169,11 +133,4 @@ object ComposeAndroidTestImplementation {
 object ComposeDebugImplementation {
     const val toolingUi = "androidx.compose.ui:ui-tooling:${Version.composeUiVersion}"
     const val manifestTest = "androidx.compose.ui:ui-test-manifest:${Version.composeUiVersion}"
-}
-
-object Plugins {
-    const val ANDROID_LIBRARY = "com.android.library"
-    const val KOTLIN_ANDROID = "org.jetbrains.kotlin.android"
-    const val DAGGER_HILT = "com.google.dagger.hilt.android"
-    const val KOTLIN_KAPT = "kapt"
 }

@@ -39,11 +39,14 @@ dependencies {
 
     implementation DependencyConstants.core
     implementation DependencyConstants.appCompat
-    implementation DependencyConstants.androidMaterial
+
+    implementation JetpackCompose.androidMaterial3
     implementation JetpackCompose.navigation
+
     implementation AndroidX.androidXRuntime
     implementation AndroidX.androidXRuntimeLiveData
     implementation AndroidX.androidXRuntimeRxJava
+
     testImplementation TestImplementation.junit
     androidTestImplementation AndroidTestImplementation.junit
     androidTestImplementation AndroidTestImplementation.espresso
