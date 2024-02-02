@@ -41,10 +41,13 @@ dependencies {
 
     implementation DependencyConstants.core
     implementation DependencyConstants.appCompat
-    implementation DependencyConstants.androidMaterial
+
+    implementation JetpackCompose.androidMaterial3
+
     implementation AndroidX.androidXRuntime
     implementation AndroidX.androidXRuntimeLiveData
     implementation AndroidX.androidXRuntimeRxJava
+
     //retrofit
     implementation Retrofit.retrofit
     implementation Retrofit.gsonConvertor
@@ -54,7 +57,6 @@ dependencies {
     //dagger hilt
     implementation DaggerHilt.hilt
     kapt DaggerHilt.hiltCompiler
-
 
     testImplementation TestImplementation.junit
     androidTestImplementation AndroidTestImplementation.junit
