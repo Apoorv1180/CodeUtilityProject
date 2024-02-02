@@ -13,11 +13,15 @@ class GetNewsListUseCase @Inject constructor(
     private val newsRepository: NewsRepository
 ) {
 
+    // Operator function to invoke the use case
     operator fun invoke(country: String, category: String, apiKey: String) =
         flow<UiEvent<List<News>>> {
+            // Emit a loading event to indicate the start of the operation
             emit(UiEvent.Loading())
+            // Fetch news list from the repository and emit a success event with the result
             emit(UiEvent.Success(newsRepository.getNewsList(country, category, apiKey)))
         }.catch {
+            // Catch any exceptions during the operation and emit an error event
             emit(UiEvent.Error(it.message.toString()))
-        }.flowOn(Dispatchers.IO)
+        }.flowOn(Dispatchers.IO) // Execute the flow on the IO dispatcher
 }
