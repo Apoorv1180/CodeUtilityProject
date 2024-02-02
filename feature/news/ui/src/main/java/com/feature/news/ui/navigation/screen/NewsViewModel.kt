@@ -73,6 +73,8 @@ class NewsViewModel @Inject constructor(
 
     companion object {
         // Hardcoded values for country, category, and API key
+        // Please note that these values can be extracted outside in
+        // local.properties and accessed as BuildConfig fields
         private const val country: String = "in"
         private const val category: String = "sports"
         private const val API_KEY: String = "ddb49c14f81a4b4e96e8f66120c33f92"
